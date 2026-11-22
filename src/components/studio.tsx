@@ -12,7 +12,7 @@ const compareIds = models.map((model) => model.id);
 export function Studio() {
   const [mode, setMode] = useState<Mode>("compare");
   const [draft, setDraft] = useState("");
-  const [singleModel, setSingleModel] = useState<ModelId>("claude-sonnet-5-5");
+  const [singleModel, setSingleModel] = useState<ModelId>("gemini-3.6-flash");
   const [statuses, setStatuses] = useState<Record<string, ChatStatus>>({
     single: "ready",
     ...Object.fromEntries(compareIds.map((id) => [id, "ready"])),
